@@ -115,8 +115,11 @@ function cleanHtml(html) {
   return sanitizeHtml(html, {
     allowedTags: sanitizeHtml.defaults.allowedTags.concat(['img']),
     allowedAttributes: {
-      a: ['href', 'name', 'target'],
-      img: ['src'],
+      // This wildcard allows the 'style' attribute on ANY tag
+      '*': ['style'],
+      // We still specify other allowed attributes for links and images
+      "a": ['href', 'name', 'target'],
+      "img": ['src', 'alt', 'title', 'width', 'height', 'style'],
     },
     allowedSchemes: ['data', 'http', 'https'],
   });
