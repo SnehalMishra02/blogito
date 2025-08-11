@@ -76,7 +76,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* UPDATED: "Tech Stack" section with your provided SVG icons */}
+      {/* Tech Stack Section */}
       <section className="py-20 sm:py-24 bg-white border-t border-b border-slate-200">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -87,6 +87,7 @@ export default function AboutPage() {
               This project was built with a modern, serverless technology stack.
             </p>
           </div>
+          {/* FIX: Corrected typo from `md:g_rid-cols-3` to `md:grid-cols-3` */}
           <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
             <TechIcon name="Next.js">
               <svg className="w-10 h-10" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Next.js</title><path d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z"/></svg>
@@ -105,44 +106,44 @@ export default function AboutPage() {
             </TechIcon>
             <TechIcon name="Node.js">
               <svg className="w-10 h-10" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Node.js</title><path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/></svg>
-            </TechIcon>
-          </div>
-        </div>
-      </section>
+            </TechIcon>
+          </div>
+        </div>
+      </section>
 
-      {/* About the Creator Section */}
-      <section className="py-20 sm:py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div className="flex-shrink-0">
-              <Image
-                src="/me.jpeg"
-                alt="A photo of yours truly"
-                width={500}
-                height={500}
-                className="w-40 h-40 rounded-full object-cover"
-              />
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-slate-900">About the Creator</h2>
-              <p className="mt-4 text-slate-600">
-                Hi, I'm Snehal. I'm a passionate developer who loves building elegant solutions to interesting problems. Blogito is my personal project to explore serverless architecture and automated content workflows.
-              </p>
-              <div className="mt-6 flex items-center gap-6">
-                <a href="https://www.linkedin.com/in/snehal-mishra-2618b2199" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-600 transition-colors">
-                  <Linkedin size={24} />
-                </a>
-                <a href="https://github.com/SnehalMishra02" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-600 transition-colors">
-                  <Github size={24} />
-                </a>
-                <a href="https://snehal-mishra.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-600 transition-colors">
-                  <LinkIcon size={24} />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+      {/* About the Creator Section */}
+      <section className="py-20 sm:py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="flex-shrink-0">
+              <Image
+                src="/me.jpeg"
+                alt="A photo of yours truly"
+                width={500}
+                height={500}
+                className="w-40 h-40 rounded-full object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900">About the Creator</h2>
+              <p className="mt-4 text-slate-600">
+                Hi, I'm Snehal. I'm a passionate developer who loves building elegant solutions to interesting problems. Blogito is my personal project to explore serverless architecture and automated content workflows.
+              </p>
+              <div className="mt-6 flex items-center gap-6">
+                <a href="https://www.linkedin.com/in/snehal-mishra-2618b2199" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-600 transition-colors">
+                  <Linkedin size={24} />
+                </a>
+                <a href="https://github.com/SnehalMishra02" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-600 transition-colors">
+                  <Github size={24} />
+                </a>
+                <a href="https://snehal-mishra.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-blue-600 transition-colors">
+                  <LinkIcon size={24} />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }

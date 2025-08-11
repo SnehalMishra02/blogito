@@ -53,7 +53,7 @@ export default async function HomePage() {
           <div className="hidden md:flex items-center gap-6">
             <Link
               href="/about"
-              className="hidden sm:block bg-slate-100 text-slate-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-slate-200 transition-colors"
+              className="hidden sm:block bg-blue-600 text-slate-100 px-4 py-2 rounded-lg text-sm font-semibold hover:shadow-lg hover:bg-blue-800 transition-colors"
             >
               About
             </Link>
