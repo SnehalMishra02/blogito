@@ -1,0 +1,25 @@
+.postContent {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Base styles for the content */
+.docContent {
+  background: transparent !important;
+}
+
+/* Content transitions */
+.docContent * {
+  transition: background-color 0.3s ease-in-out,
+              color 0.3s ease-in-out,
+              border-color 0.3s ease-in-out !important;
+}
+
+.post {
+  padding: 2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
