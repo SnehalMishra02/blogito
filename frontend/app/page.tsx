@@ -38,7 +38,7 @@ export default async function HomePage() {
   const posts = await getPosts();
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans">
+    <div className="flex flex-col min-h-screen bg-slate-50 font-sans">
       {/* Header Section */}
       <header className="bg-white border-b border-slate-200">
         <nav className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
@@ -46,7 +46,7 @@ export default async function HomePage() {
             <div className="bg-blue-600 p-2 rounded-lg">
               <Rss className="text-white" size={24} />
             </div>
-            <Link href='\' className="text-2xl font-bold text-slate-900 tracking-tight">
+            <Link href='/' className="text-2xl font-bold text-slate-900 tracking-tight">
               Blogito
             </Link>
           </div>
@@ -97,7 +97,7 @@ export default async function HomePage() {
             ))
           ) : (
             <p className="col-span-full text-center text-slate-500 text-lg">
-              No posts found. Try creating a new Google Doc in your blog folder!
+              No posts available at the moment. Please check back later!
             </p>
           )}
         </div>
