@@ -1,5 +1,6 @@
 import { parseDocument } from 'htmlparser2';
 import { isTag } from 'domhandler';
+import type { ChildNode } from 'domhandler'; // FIX: Import the ChildNode type
 
 function extractStyleValue(style: string, prop: string): string | null {
   const regex = new RegExp(`${prop}\\s*:\\s*(#[0-9a-fA-F]{6}|#[0-9a-fA-F]{3})`, 'i');
@@ -50,7 +51,8 @@ export function extractColorsFromHtml(html: string): {
   const doc = parseDocument(cleanedHtml);
   const nodes = doc.childNodes;
 
-  function traverse(node: any) {
+  // FIX: Change 'any' to the more specific 'ChildNode' type
+  function traverse(node: ChildNode) {
     if (!isTag(node)) return;
 
     if (node.name === 'span' && node.attribs?.style) {
